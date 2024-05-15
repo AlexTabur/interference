@@ -32,7 +32,7 @@ def calculate():
     #mul=phase
     intensity = amplitude**2
     mul = intensity
-    return valmap(mul, np.min(mul), np.max(mul), 0, 1)  
+    return valmap(mul, np.min(mul), np.max(mul), 0, 1)
 def calculate1():
     total = sources[0]
     #real = total.real
@@ -84,8 +84,8 @@ class MainWindow(QtWidgets.QMainWindow):
             for num in range(3):
                 getattr(self, f"{a}{num}").sliderReleased.connect(update_source(num))
                 getattr(self, f"{a}{num}").setMinimum(n_points*minmax[0])
-                getattr(self, f"{a}{num}").setMaximum(n_points*minmax[1]
-)mkQApp("ColorBarItem Example")
+                getattr(self, f"{a}{num}").setMaximum(n_points*minmax[1])
+mkQApp("ColorBarItem Example")
 main_window = MainWindow()
 
 ## Start Qt event loop
